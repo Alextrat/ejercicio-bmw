@@ -1,0 +1,79 @@
+
+.flexbox-container-header{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row; /* se muestran los elementos en orden de fila, */
+    flex-wrap: wrap;  /* muestra los elementos en fila, pero cuando superan los elementos  el ancho, salta de linea     */
+    height: 440px;
+    width: auto;
+    border: 5px solid rgb(217, 28, 28);
+    background-image: url(https://65e81151f52e248c552b-fe74cd567ea2f1228f846834bd67571e.ssl.cf1.rackcdn.com/BMW/BMW_CPO_Banner.jpg);
+    background-size:cover;
+
+   
+}
+.flexbox-header-item img{
+    max-width: 130px;  /* tamaño logo bmw */
+}
+.flexbox-header-item{
+    padding:10px;
+   width: 60%;
+}
+
+.item1{
+    flex-basis:49%;
+    order:1;
+    /* border: 5px solid black; */
+    align-items: center;
+    height: 125px;
+}
+span a{
+    margin-left: 80px;
+    text-decoration: none;
+    font-size: larger;
+    color: azure;
+}
+.item2{
+    /* border: 5px solid black; */
+    flex-basis: 45%;
+    order:2;
+    height: 125px;
+}
+.item2 span{
+ 
+}
+.header-bottom{
+    font-size: larger;
+    color: rgb(225, 76, 76);
+    order:3;
+
+}
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    src: url(../webfonts/fa-solid-900.eot);
+ }
+ .fa {
+    font-family: "Font Awesome 5 Free"
+ }
+ .fa-hospital:before {
+    content: "\f0f8"
+ }
+ .fa-hotel:before {
+    content: "\f594"
+ }
+ .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit);
+    grid-gap:20px;
+    border: 5px solid forestgreen;
+    height:800px;
+    width: auto;
+ }
+ .modelo-coche{
+
+width: 400px;
+ }
+
+ 
+ 
