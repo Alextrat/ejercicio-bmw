@@ -1,14 +1,18 @@
-*{
-    list-style: none;
+
+*{/* Elemento modificador. Así pongo a cero cualquier estilo predefinido y a mi gusto. */
+    list-style: none;  
     padding: 0;
-    margin:2%;
-    margin-right: 3%;
+    margin:0;
+    margin-right:0;
     text-decoration: none;   
 }
-body{
+body{/* Cambio color fondo y doy márgenes */
     background-color: rgb(204, 214, 222);
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2%;
 }
-header{
+header{/* Pongo una imágen de background */
     background-image: url(./imagenes/header2.jpg);
     background-size: cover;
     height: 80vh;
@@ -16,48 +20,51 @@ header{
 
 }
 nav{
-    display: flex;
+    display: flex; /* Posiciono el nav como flex. */
     justify-content: space-between;
     
 }
-nav::after{
+nav::after{ /* añado al final del nav una línea. No cubre todo el ancho, por eso no pongo margin bottom. */
     content: "";
     background-color: black;
     width: 70%;
     height: 2px;
     position: absolute;
-    top: 30%;
+    top: 20%;
 
 }
-nav > ul{
+nav > ul{ /*Hago display flex a los elementos de la lista "UL". */
     display: flex;
 }
 .nav__ul--enlaces > li{
     padding: 10px;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 600;
-    color: rgb(25, 67, 103);
+    margin-left: 4%;
+    width:12vw;    /* Así hago más ancho cada li */
+    display: flex; /* para mas abajo centrar verticalmente */
+    align-items: center;/* Centro verticalmente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
 
 }
-.nav__ul--iconos{
+.nav__ul--iconos{ /* hago flex el apartado de los iconos */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .nav__ul--iconos > li{
-    width: 10%;   
+    width: 12%;   /* le doy ancho a cada espacio donde coloco los iconos */
 }
 li img{
-    width: 50%;
+    width: 40%; /* le doy tamaño a cada icono dentro de su "li" */
 }
 .logo{
     width: 130px;
 }
 .header__div{
-    position: absolute;
-    top: 55%;
+    position: absolute; /* con esta propiedad puedo darle posición en las coordenadas y/x  */
+    top: 67%; /* Lo posiciono en vertical */
     left: 10%;
     color: aliceblue;
 }
@@ -72,33 +79,33 @@ li img{
 main{
     margin-top: 2%;
     padding: 4%;
-    margin-left: 10%;
+ 
 }
 
-.main__contenedor--modelos{
+.main__contenedor--modelos{ /* Hago display grid al contenedor de los modelos y le doy 2 filas x 4 columnas */
     display: grid;
     grid-template-rows:1fr 1fr ;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
 
     margin-top: 5%;
 }
-.main__contenedor--modelos img{
+.main__contenedor--modelos img{ /* defino el tamaño de imagen de cada modelo */
     width: 80%;
     height: 150px;
 }
-.main__ul--modelos{
+.main__ul--modelos{ /* hago flex el UL para posicionarlo en horizontal. Quizá cambiarlo a nav en lugar de div */
     display: flex;
     margin-left: 1%;
 
 }
-.main__ul--modelos > li{
-    width: 6%;
+.main__ul--modelos > li{ /* defino un ancho para cada caja de modelo y lo coloco flex para */
+    width: 12%;             /* que se coloque en horizontal */
     display: flex;
     align-items: center;
     font-size: 25px;
     font-weight: 800;
 }
-.main__contenedor--opciones{
+.main__contenedor--opciones{ /* coloco estos elementos con grid */
     margin-top: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
@@ -115,7 +122,7 @@ main{
     width:100% ;
     height:500px;
 }
-.main__contenedor--opciones2{
+.main__contenedor--opciones2{ /* ahora coloco estos elementos con flex */
     display: flex;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
@@ -128,9 +135,11 @@ main{
     /* width: 30%; */
     height: 150px;
 }
-.main__contenedor--bottom{
+.main__contenedor--bottom{ /* coloco los iconos con flex */
     display: flex;
     margin-top: 10%;
+    font-size: larger;
+    font-weight: 900;
     justify-content: space-evenly;
 
 }
@@ -138,10 +147,10 @@ main{
 
 
 
-.footer__ul--enlaces{
+.footer__ul--enlaces{ /* listado de "enlaces"  para el ejercicio colocados con grid */
     background-color: rgb(209, 209, 209);
     padding-top: 3%;
-    padding-left: 15%;
+    padding-left: 12%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
